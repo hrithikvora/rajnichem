@@ -1,12 +1,9 @@
 ---
-import { Icon } from 'astro-icon';
 import Container  from '../core/Container.astro';
-import LittleSticksPlug from './LittleSticksPlug.astro';
 
-const { footerSocials, footerLists, copyrightName, background, color, showLittleSticksPlug = true } =
+const { footerLists, copyrightName, background, color } =
   Astro.props;
 ---
-
 <footer
   style={background && `--footer-bg:${background}; --footer-color:${color}`}
 >
@@ -16,24 +13,18 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
         <div>
           <slot name="logo" />
         </div>
-        <ul class="footer-socials__list">
-          {
-            footerSocials.map((social) => (
-              <li class="footer-socials__item">
-                <a
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="footer-socials__link"
-                  title={`Open ${social.name} profile`}
-                >
-                  <Icon name={social.icon} width="24px" height="24px" />
-                </a>
-              </li>
-            ))
-          }
-        </ul>
       </div>
+      <figure>
+        <a target="_blank" href="https://goo.gl/maps/twTrx4WDWD5vafLt5">
+              <img
+        id="addr-embed"
+        src="/assets/images/addr_embed.png"
+        alt="Astro Odyssey"
+        loading="lazy"
+      /></a>
+        <figcaption>B-108, Mayur Appts, Sodawala Lane, Borivali West, Mumbai 400092</figcaption>
+</figure>
+
       {
         footerLists.map((list) => (
           <div>
@@ -50,14 +41,23 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
       }
     </div>
     <div class="footer-copyright__container">
-      {showLittleSticksPlug && <LittleSticksPlug/>}
       <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
     </div>
-
   </Container>
 </footer>
 
 <style>
+  #addr-embed {
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    cursor: pointer;
+  }
+  #addr-embed > figcaption {
+    padding: 100px;
+    padding-top: 5px;
+  }
   footer {
     --footer-bg: var(--theme-primary);
     --footer-color: var(--theme-on-primary);
@@ -70,7 +70,8 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
   .footer-grid__container {
     padding: 10vh 0 1rem 0;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 150px;
   }
   .footer-socials__list {
     margin: 1rem 0;
@@ -109,8 +110,11 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
     }
     .footer-grid__container {
       padding: 5vh 0;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 1rem;
+    }
+    #addr-embed {
+      max-width: 100%;
     }
   }
   @media (max-width: 600px) {
@@ -121,6 +125,9 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
     }
     .footer-copyright__container {
       flex-direction: column;
+    }
+    #addr-embed {
+      max-width: 100%;
     }
   }
 </style>

@@ -2,7 +2,7 @@
 export { default as Container } from './core/Container.astro';
 export { default as SkipLink } from './core/SkipLink.astro';
 export { default as Header } from './core/Header.astro';
-export { default as Footer } from './core/Footer.astro';
+//export { default as Footer } from './core/Footer.astro';
 export { default as YouTubeEmbed } from './core/YouTubeEmbed.astro';
 export { default as AnnouncementBar } from './core/AnnouncementBar.astro';
 export { default as LittleSticksPlug} from './core/LittleSticksPlug.astro';
@@ -21,6 +21,7 @@ export { default as ThreeColumnTextSection } from './sections/ThreeColumnTextSec
 export { default as YouTubeEmbedSection } from './sections/YouTubeEmbedSection.astro';
 export { default as StickyTextImageSection } from './sections/StickyTextImageSection.astro';
 export { default as CtaCardSection } from './sections/CtaCardSection.astro';
+export { default as Footer} from './sections/Footer.astro';
 
 // Blog
 export { default as BlogPostsList } from './blog/BlogPostsList.astro';
