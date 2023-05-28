@@ -10,7 +10,7 @@ export const footerLists = [
 			},
 			{
 				title: 'Products',
-				slug: '/Products',
+				slug: '/products',
 			},
 			{
 				title: 'Contact',
