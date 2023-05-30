@@ -6,7 +6,9 @@ import lit from '@astrojs/lit';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hrithikvora.github.io/',
+	base: 'rajnichem',
+	site: 'http://127.0.0.1:5500/dist/', 
+	
 	// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 	sitemap: true,
 	// Generate sitemap (set to "false" to disable)
