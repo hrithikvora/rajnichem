@@ -1,18 +1,18 @@
 export const nav = [
 	{
 		title: 'Home',
-		slug: '/',
+		slug: '/rajnichem/',
 	},
 	{
 		title: 'Products',
-		slug: '/products',
+		slug: '/rajnichem/products',
 	},
 	{
 		title: 'About',
-		slug: '/company/about',
+		slug: '/rajnichem/company/about',
 	},
 	{
 		title: 'Contact',
-		slug: '/company/contact',
+		slug: '/rajnichem/company/contact',
 	},
 ];
