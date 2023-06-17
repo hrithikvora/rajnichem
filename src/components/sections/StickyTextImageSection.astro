@@ -9,7 +9,9 @@ const {reversed} = Astro.props;
     <div class="sticky-text-image__text">
       <slot name="text-container"></slot>
     </div>
-    <div class="sticky-text-image__image">
+    <div class="sticky-text-image__image" style="
+		display: flex;
+		align-items: center;">
       <slot name="image-container"></slot>
     </div>
   </section>
