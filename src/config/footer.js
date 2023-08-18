@@ -6,15 +6,15 @@ export const footerLists = [
 		items: [
 			{
 				title: 'About',
-				slug: '/rajnichem/company/about',
+				slug: '/company/about',
 			},
 			{
 				title: 'Products',
-				slug: '/rajnichem/products',
+				slug: '/products',
 			},
 			{
 				title: 'Contact',
-				slug: '/rajnichem/company/contact',
+				slug: '/company/contact',
 			},
 		],
 	},
